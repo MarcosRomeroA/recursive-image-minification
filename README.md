@@ -4,7 +4,7 @@ This script is util to minify multiple images files inside multiple folders
 
 #### How to install dependencies
 
-`pip install requerements.txt`
+`pip install -r requerements.txt`
 
 #### How to use
 
