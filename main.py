@@ -4,12 +4,12 @@ from PIL import Image
 quality = 30
 
 images_folder = 'images'
-images_destination = 'compressed'
+images_destination_folder = 'compressed'
 
 i = 0
 
-if not os.path.exists(images_destination):
-    os.mkdir(images_destination)
+if not os.path.exists(images_destination_folder):
+    os.mkdir(images_destination_folder)
 
 for root, subdirs, files in os.walk(images_folder):
 
@@ -24,11 +24,11 @@ for root, subdirs, files in os.walk(images_folder):
             f = open(filePath, 'r')
             head, tail = os.path.split(f.name)
 
-            if not os.path.exists(images_destination + head[len(images_folder):]):
-                os.mkdir(images_destination + head[len(images_folder):])
+            if not os.path.exists(images_destination_folder + head[len(images_folder):]):
+                os.mkdir(images_destination_folder + head[len(images_folder):])
 
             im = Image.open(f.name)
-            im.save(images_destination + head[len(images_folder):] + '/' + tail, quality=quality)
+            im.save(images_destination_folder + head[len(images_folder):] + '/' + tail, quality=quality)
             i += 1
 
 print(str(i) + ' images were compressed')
