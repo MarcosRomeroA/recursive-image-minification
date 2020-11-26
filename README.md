@@ -18,7 +18,7 @@ and
 
 Then execute
 
-###### Folder structure example:
+###### Input Folder structure example:
 
 ```
 images/
@@ -37,7 +37,7 @@ images/
     
 ```
 
-###### Output structure example:
+###### Output Folder structure example:
 
 ```
 Compressed/
