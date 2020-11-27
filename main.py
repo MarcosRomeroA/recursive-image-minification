@@ -25,7 +25,7 @@ for root, subdirs, files in os.walk(images_folder):
             head, tail = os.path.split(f.name)
 
             if not os.path.exists(images_destination_folder + head[len(images_folder):]):
-                os.mkdir(images_destination_folder + head[len(images_folder):])
+                os.makedirs(images_destination_folder + head[len(images_folder):])
 
             im = Image.open(f.name)
             im.save(images_destination_folder + head[len(images_folder):] + '/' + tail, quality=quality)

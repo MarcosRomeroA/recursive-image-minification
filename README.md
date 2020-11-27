@@ -12,7 +12,9 @@ Set quality var:
 
 `quality=30`
 
-and 
+and folders:
+
+`images_folder='images'`
 
 `images_destination='compressed'`
 
